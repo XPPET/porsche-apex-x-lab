@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", system-ui, sans-serif;
+    letter-spacing: -0.011em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .dark body {
+    background-color: #0E1117;
+    color: #F1F5F9;
+  }
+
+  .light body {
+    background-color: #F8F9FA;
+    color: #0F172A;
+  }
+
+  /* Optical Typography Sizing & Tracking */
+  h1, h2, .display-title {
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    font-weight: 600;
+  }
+
+  h3, h4, .section-title {
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+  }
+
+  .label-caps {
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-feature-settings: "case" 1;
+  }
+
+  /* Sophisticated Apple-Style Minimal Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 9999px;
+  }
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.24);
+  }
+  .light ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.16);
+    border-radius: 9999px;
+  }
+  .light ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.28);
+  }
+}
+
+/* ========================================================
+   1. Response & Interaction: Kill Latency (Apple Fluid UI)
+   ======================================================== */
+button, [role="button"], a {
+  transition: transform 100ms cubic-bezier(0.2, 0, 0, 1), background-color 150ms ease, border-color 150ms ease, color 150ms ease, box-shadow 150ms ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Instant tactile compression on pointer-down */
+button:active:not(:disabled), [role="button"]:active:not(:disabled) {
+  transform: scale(0.975);
+}
+
+/* ========================================================
+   2. Materials & Depth: Translucency Conveys Hierarchy
+   ======================================================== */
+.dark .studio-card {
+  background: rgba(18, 22, 32, 0.70);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-top: 1px solid rgba(255, 255, 255, 0.14); /* Light-catching bright top edge */
+  border-left: 1px solid rgba(255, 255, 255, 0.07);
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 12px 36px -4px rgba(0, 0, 0, 0.40);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dark .studio-card:hover {
+  border-top-color: rgba(255, 255, 255, 0.22);
+  border-left-color: rgba(255, 255, 255, 0.12);
+  border-right-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 44px -4px rgba(0, 0, 0, 0.50);
+}
+
+.light .studio-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.light .studio-card:hover {
+  border-color: rgba(0, 0, 0, 0.14);
+  box-shadow: 0 12px 36px -4px rgba(0, 0, 0, 0.09), inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* ========================================================
+   3. Direct Manipulation: Sliders & Controls
+   ======================================================== */
+input[type="range"].studio-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 9999px;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.dark input[type="range"].studio-slider {
+  background: rgba(255, 255, 255, 0.12);
+}
+.dark input[type="range"].studio-slider:hover {
+  background: rgba(255, 255, 255, 0.20);
+}
+.dark input[type="range"].studio-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  cursor: grab;
+  border: 1.5px solid #0E1117;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35), 0 0 1px rgba(0, 0, 0, 0.5);
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 120ms ease;
+}
+.dark input[type="range"].studio-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+.dark input[type="range"].studio-slider::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.35);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.light input[type="range"].studio-slider {
+  background: rgba(0, 0, 0, 0.10);
+}
+.light input[type="range"].studio-slider:hover {
+  background: rgba(0, 0, 0, 0.16);
+}
+.light input[type="range"].studio-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  cursor: grab;
+  border: 1.5px solid #CBD5E1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.2);
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 120ms ease;
+}
+.light input[type="range"].studio-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+.light input[type="range"].studio-slider::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(1.35);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+input[type="range"].studio-slider-carmine::-webkit-slider-thumb:hover {
+  border-color: #D5001C !important;
+}
+
+input[type="range"].studio-slider-acid::-webkit-slider-thumb:hover {
+  border-color: #94E000 !important;
+}
+
+/* ========================================================
+   4. Tabular Numbers & Precision Optical Readouts
+   ======================================================== */
+.num-tabular {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.015em;
+}
+
+/* ========================================================
+   5. Reduced Motion, Transparency & Contrast (Accessibility)
+   ======================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  button:active, [role="button"]:active {
+    transform: none !important;
+  }
+  input[type="range"].studio-slider::-webkit-slider-thumb:hover,
+  input[type="range"].studio-slider::-webkit-slider-thumb:active {
+    transform: none !important;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .studio-card, header, footer {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  .dark .studio-card {
+    background: #151922 !important;
+  }
+  .light .studio-card {
+    background: #FFFFFF !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .dark .studio-card {
+    border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+  }
+  .light .studio-card {
+    border: 1.5px solid rgba(0, 0, 0, 0.45) !important;
+  }
+}
