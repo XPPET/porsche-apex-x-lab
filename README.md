@@ -12,34 +12,32 @@ An interactive motorsport engineering workbench and telemetry command center mod
 
 ---
 
-## Interactive Walkthrough & Media
+## Interactive Walkthrough
 
 ### Virtual Wind Tunnel Simulation (Live Airflow & DRS Physics)
 
-https://github.com/user-attachments/assets/wind-tunnel-demo.mp4
-
-*(Note: Ensure `screenshots/wind-tunnel-demo.mp4` is pushed to your repository, or drag-and-drop the `.mp4` file directly into the GitHub web editor for `README.md` to generate an auto-playing CDN video embed.)*
-
----
-
-### Module Interface Previews
-
-| Virtual Wind Tunnel & Aero Polar | Live Telemetry & Friction Circle | Powertrain & 1/4-Mile Drag Simulator |
-| :---: | :---: | :---: |
-| ![Virtual Wind Tunnel](./screenshots/wind-tunnel.png) | ![Live Telemetry Hub](./screenshots/telemetry.png) | ![Powertrain Comparator](./screenshots/powertrain.png) |
+https://raw.githubusercontent.com/XPPET/porsche-apex-x-lab/main/screenshots/wind-tunnel-demo.mp4
 
 ---
 
 ## Core Engineering Modules
 
 ### 1. Virtual Wind Tunnel & Aerodynamics Workbench
+
+![Virtual Wind Tunnel](./screenshots/wind-tunnel.png)
+
 A real-time aerodynamic testing environment equipped with a floating glassmorphic HUD control dock (`Aero Controls`) for zero-scroll parameter tuning:
 * **Quadratic Downforce & Drag Modeling:** Calculates vertical aerodynamic load ($F_z$ in Newtons and kg-equivalent) as a function of velocity squared ($v^2$), swan-neck rear wing angle of attack ($0^\circ\text{–}25^\circ$), and chassis ride height ($-20\text{ mm}$ to $+20\text{ mm}$).
 * **Active DRS (Drag Reduction System):** Flattens the upper rear wing element on demand, reducing the drag coefficient ($C_d$) by ~30% and dynamically recalculating drag-limited top speed ($V_{\max}$).
 * **Dynamic Axle Balance & Polar Curves:** Visualizes Front vs. Rear center-of-pressure distribution and plots real-time Angle-of-Attack and Velocity Sweep polar curves via Chart.js.
 * **Vector Airflow Streamlines:** Color-coded streamline vectors illustrating front radiator stagnation (Carmine Red), underbody Venturi ground-effect suction (Acid Green), and wake turbulence.
 
+---
+
 ### 2. Live Telemetry & G-Force Command Hub
+
+![Live Telemetry Hub](./screenshots/telemetry.png)
+
 Emulates a trackside pit-wall telemetry monitor (inspired by Porsche Piwis / Cosworth telemetry systems) simulating a hot lap around the **20.832 km Nürburgring Nordschleife**:
 * **Friction Circle (Kamm's Circle of Adhesion):** Plots instantaneous lateral cornering forces (up to $\pm 1.8\text{G}$) against longitudinal braking and acceleration loads to analyze trail-braking efficiency.
 * **4-Corner Thermal & Pressure Telemetry:**
@@ -48,7 +46,12 @@ Emulates a trackside pit-wall telemetry monitor (inspired by Porsche Piwis / Cos
 * **PTV+ Active Differential Split:** Displays real-time rear-axle torque vectoring lock distribution between left and right rear wheels.
 * **Multi-Channel Rolling Buffer:** Synchronized time-series traces comparing vehicle velocity ($\text{km/h}$), throttle position ($\%$), and brake pressure ($\%$).
 
+---
+
 ### 3. Powertrain Comparator & 1/4-Mile Drag Strip Simulator
+
+![Powertrain Comparator](./screenshots/powertrain.png)
+
 A side-by-side engineering comparison between internal combustion precision and high-voltage electric propulsion:
 
 | Engineering Specification | 911 GT3 RS (992) | Taycan Turbo GT (Attack Mode) |
@@ -63,6 +66,8 @@ A side-by-side engineering comparison between internal combustion precision and 
 
 * **Interactive Dyno Curves:** Toggleable horsepower ($\text{PS}$) and torque ($\text{Nm}$) curves contrasting instant EV torque delivery against the linear high-RPM crescendo of the flat-six Boxer.
 * **Quarter-Mile (402m) Launch Simulator:** Physics-driven acceleration race allowing real-time adjustments to vehicle curb weight, fuel load, battery State of Charge ($\text{SoC}$), and EV drive modes (*Attack*, *Track*, *Endurance*).
+
+---
 
 ### 4. Dual Vision Modes (Day Studio / Night Telemetry)
 * **Day Vision:** High-key silver and off-white aesthetic tailored for aerodynamic flow inspection and design studio reviews.
