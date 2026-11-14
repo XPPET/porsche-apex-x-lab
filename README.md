@@ -16,7 +16,11 @@ An interactive motorsport engineering workbench and telemetry command center mod
 
 ### Virtual Wind Tunnel Simulation (Live Airflow & DRS Physics)
 
-https://raw.githubusercontent.com/XPPET/porsche-apex-x-lab/main/screenshots/wind-tunnel-demo.mp4
+
+
+https://github.com/user-attachments/assets/bd1d5e5f-9315-4536-9537-8b91d8bb0f5b
+
+
 
 ---
 
