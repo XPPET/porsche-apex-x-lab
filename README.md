@@ -1,57 +1,96 @@
-# Porsche Apex-X Studio | Aerodynamic Engineering & Telemetry Lab
+# Porsche Apex-X Studio // Aerodynamic Engineering & Telemetry Lab
 
-> **A minimalist, high-end automotive design & telemetry engineering suite.** Built following the design principles of **Porsche Design** and **Apple-level minimalism**: deep graphite/charcoal monochromatic base, subtle frosted glassmorphism, restrained Porsche Carmine Red (`#D5001C`) and subtle Electric Acid Green accents, clean geometric typography (`Inter`), and monospace numerals (`JetBrains Mono`).
+[![Live Demo](https://img.shields.io/badge/Live_Demo-GitHub_Pages-10b981?style=for-the-badge&logo=github)](https://xppet.github.io/porsche-apex-x-lab/)
+[![React](https://img.shields.io/badge/React-18-20232a?style=for-the-badge&logo=react&logoColor=61dafb)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5-646cff?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06b6d4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Chart.js](https://img.shields.io/badge/Chart.js-4-ff6384?style=for-the-badge&logo=chartdotjs&logoColor=white)](https://www.chartjs.org/)
 
----
+An interactive motorsport engineering workbench and telemetry command center modeled around the performance physics of Porsche Motorsport—contrasting the naturally aspirated, high-downforce **Porsche 911 GT3 RS (992)** against the all-electric, twin-motor **Porsche Taycan Turbo GT**.
 
-## 🏎️ Design Philosophy & Aesthetic System
-
-- **Monochromatic Studio Palette:** Deep slate/charcoal canvas (`#07090D`, `#0D1016`, `#121620`) paired with delicate 1px borders (`rgba(255, 255, 255, 0.08)`) and frosted glass surfaces.
-- **Restrained Automotive Accents:**
-  - **Porsche Carmine Red (`#D5001C`):** Reserved strictly for active indicators, redline alerts, and key metric highlights.
-  - **Electric Acid Green (`#94E000`):** Used subtly for DRS activation badges, optimal thermal ranges, and EV powertrain indicators.
-  - **Zero Visual Noise:** NO gaudy neon glows, blinding border glows, heavy drop shadows, or cheap gaming scanlines.
-- **Precision Typography:**
-  - **Body & Headings:** `Inter` geometric sans-serif with ample whitespace, precise kerning, and clear visual hierarchy.
-  - **Telemetry Numbers:** `JetBrains Mono` with tabular numerals (`num-tabular`) for precision readouts.
-- **Vehicle Representation:**
-  - High-end vector SVG / Canvas blueprint side profile accurately representing the iconic **Porsche 911 GT3 RS (992 generation)**: characteristic flyline, authentic swan-neck wing mount, front fender louvers, center-lock wheels, ceramic brakes, and active hydraulic articulation.
+**[Launch Live Application](https://xppet.github.io/porsche-apex-x-lab/)**
 
 ---
 
-## 🛠️ Modules Overview
+## Interactive Walkthrough & Media
 
-### 1. Virtual Wind Tunnel & Aerodynamics Studio
-- **Clean Studio-Like Canvas:** Ultra-thin vector streamlines (`lineWidth: 0.85px`) flowing smoothly around the 911 GT3 RS body profile.
-- **Interactive Vehicle Articulation:** Real-time wing angle tilt (0°–25°), chassis ride height compression (-20mm to +20mm) simulating Venturi ground effect suction, and active DRS flap opening.
-- **View Mode Switch:** Seamless toggle between *Studio Flow* and architectural *CAD Blueprint* with wheelbase and length dimension callouts.
-- **Digital Tuning Studio Sliders:** Minimalist slider tracks with fluid interaction and quick presets (*Max Downforce*, *Balanced*, *V-Max Low Drag*).
-- **Minimalist Editorial Metric Cards:** Large, crisp numerals for Downforce (Newtons & kg load), Drag Coefficient ($C_d$), Top Speed ($v_{\text{max}}$), and Aero Balance front/rear percentage split.
-- **Aero Trade-Off Graph:** Soft Chart.js line graph with subtle grid lines comparing Downforce vs. Drag across angle and velocity sweeps.
+### Virtual Wind Tunnel Simulation (Live Airflow & DRS Physics)
 
-### 2. Telemetry & G-Force Hub
-- **Digital Cockpit Cluster:** Inspired by the modern Porsche 992 curved digital instrument cluster: 9,000 RPM tachometer with sequential LED shift lights, large digital speed readout, PDK gear numeral, and clean throttle/brake meters.
-- **Minimalist Friction Circle (GG Diagram):** Restrained G-force scatter plot with subtle concentric 0.5G–2.0G adhesion limit rings, crosshairs, and decaying historical points without visual clutter.
-- **Architectural Chassis Telemetry:** 4-corner layout showing carbon-ceramic brake rotor temperatures (°C with subtle thermal status), tire pressures (bar & psi), surface temperatures, and Porsche Torque Vectoring (PTV+) dynamic split bar.
-- **Nürburgring Nordschleife Vector Map:** Clean track path with vehicle beacon traversing 20.832 km, lap timer, and delta vs. the 6:49.328 record.
-- **Streaming Telemetry Buffer:** Soft multi-channel line chart tracking velocity, throttle, and brake over time.
-- **Simulation Actions:** Start/Pause feed, 1x/2x speed multipliers, and reset.
+https://github.com/user-attachments/assets/wind-tunnel-demo.mp4
 
-### 3. Powertrain Comparator (ICE vs EV)
-- **Side-by-Side Comparison Table:** Clean, editorial table contrasting the **Naturally Aspirated 4.0L Boxer Flat-6 (911 GT3 RS)** against the **Dual-Motor PSM (Taycan Turbo GT)** across all homologated technical specs.
-- **Dyno Curves Graph:** Clean Chart.js graph comparing Power (PS) and Torque (Nm) output across engine/motor RPM with filter controls.
-- **Chassis & Power Controls:** Sliders for vehicle curb weight, fuel load, battery state of charge, and EV power delivery modes (*Attack Mode 1,108 PS*, *Track Mode 850 PS*, *Endurance 760 PS*).
-- **Quarter Mile Drag Benchmark Runner:** Staging tree countdown lights, dual asphalt drag strip lanes with GT3 RS and Turbo GT car markers, live split times (0–100, 0–200, 1/4 mile ET, trap speed), and official time slip.
+*(Note: Ensure `screenshots/wind-tunnel-demo.mp4` is pushed to your repository, or drag-and-drop the `.mp4` file directly into the GitHub web editor for `README.md` to generate an auto-playing CDN video embed.)*
 
 ---
 
-## 🚀 Running Locally
+### Module Interface Previews
 
-```bash
-# Development Server
-npm run dev
+| Virtual Wind Tunnel & Aero Polar | Live Telemetry & Friction Circle | Powertrain & 1/4-Mile Drag Simulator |
+| :---: | :---: | :---: |
+| ![Virtual Wind Tunnel](./screenshots/wind-tunnel.png) | ![Live Telemetry Hub](./screenshots/telemetry.png) | ![Powertrain Comparator](./screenshots/powertrain.png) |
 
-# Production Build
-npm run build
-```
-Live at `http://localhost:3000/`.
+---
+
+## Core Engineering Modules
+
+### 1. Virtual Wind Tunnel & Aerodynamics Workbench
+A real-time aerodynamic testing environment equipped with a floating glassmorphic HUD control dock (`Aero Controls`) for zero-scroll parameter tuning:
+* **Quadratic Downforce & Drag Modeling:** Calculates vertical aerodynamic load ($F_z$ in Newtons and kg-equivalent) as a function of velocity squared ($v^2$), swan-neck rear wing angle of attack ($0^\circ\text{–}25^\circ$), and chassis ride height ($-20\text{ mm}$ to $+20\text{ mm}$).
+* **Active DRS (Drag Reduction System):** Flattens the upper rear wing element on demand, reducing the drag coefficient ($C_d$) by ~30% and dynamically recalculating drag-limited top speed ($V_{\max}$).
+* **Dynamic Axle Balance & Polar Curves:** Visualizes Front vs. Rear center-of-pressure distribution and plots real-time Angle-of-Attack and Velocity Sweep polar curves via Chart.js.
+* **Vector Airflow Streamlines:** Color-coded streamline vectors illustrating front radiator stagnation (Carmine Red), underbody Venturi ground-effect suction (Acid Green), and wake turbulence.
+
+### 2. Live Telemetry & G-Force Command Hub
+Emulates a trackside pit-wall telemetry monitor (inspired by Porsche Piwis / Cosworth telemetry systems) simulating a hot lap around the **20.832 km Nürburgring Nordschleife**:
+* **Friction Circle (Kamm's Circle of Adhesion):** Plots instantaneous lateral cornering forces (up to $\pm 1.8\text{G}$) against longitudinal braking and acceleration loads to analyze trail-braking efficiency.
+* **4-Corner Thermal & Pressure Telemetry:**
+  * **PCCB Carbon-Ceramic Rotors ($^\circ\text{C}$):** Monitors rotor temperatures against their optimal $350^\circ\text{C}\text{–}650^\circ\text{C}$ operating window with automated thermal warning states above $680^\circ\text{C}$.
+  * **Michelin Pilot Sport Cup 2 R Tires:** Tracks live hot running pressures ($\text{BAR}$ / $\text{PSI}$) and carcass core temperatures ($^\circ\text{C}$).
+* **PTV+ Active Differential Split:** Displays real-time rear-axle torque vectoring lock distribution between left and right rear wheels.
+* **Multi-Channel Rolling Buffer:** Synchronized time-series traces comparing vehicle velocity ($\text{km/h}$), throttle position ($\%$), and brake pressure ($\%$).
+
+### 3. Powertrain Comparator & 1/4-Mile Drag Strip Simulator
+A side-by-side engineering comparison between internal combustion precision and high-voltage electric propulsion:
+
+| Engineering Specification | 911 GT3 RS (992) | Taycan Turbo GT (Attack Mode) |
+| :--- | :--- | :--- |
+| **Powertrain Architecture** | 4.0L Naturally Aspirated Flat-6 Boxer | Dual Permanent-Magnet Synchronous Motors |
+| **Peak Power Output** | 525 PS (386 kW) @ 8,500 RPM | 1,034 PS (760 kW) Attack Mode |
+| **Peak Torque** | 465 Nm @ 6,300 RPM | 1,340 Nm Instantaneous |
+| **Redline / Max Motor Speed** | 9,000 RPM | 16,000 RPM |
+| **Transmission** | 7-Speed Porsche Doppelkupplung (PDK) | 2-Speed Rear + Single-Speed Front |
+| **Drivetrain** | Rear-Wheel Drive (RWD) with PTV+ | All-Wheel Drive (AWD) with Torque Vectoring |
+| **Curb Weight** | ~1,450 kg (Weissach Package) | ~2,220 kg |
+
+* **Interactive Dyno Curves:** Toggleable horsepower ($\text{PS}$) and torque ($\text{Nm}$) curves contrasting instant EV torque delivery against the linear high-RPM crescendo of the flat-six Boxer.
+* **Quarter-Mile (402m) Launch Simulator:** Physics-driven acceleration race allowing real-time adjustments to vehicle curb weight, fuel load, battery State of Charge ($\text{SoC}$), and EV drive modes (*Attack*, *Track*, *Endurance*).
+
+### 4. Dual Vision Modes (Day Studio / Night Telemetry)
+* **Day Vision:** High-key silver and off-white aesthetic tailored for aerodynamic flow inspection and design studio reviews.
+* **Night Vision:** Low-glare charcoal command center with frosted glass panels and high-contrast Electric Acid Green accents built for trackside telemetry analysis.
+
+---
+
+## Project Architecture
+
+```text
+porsche-apex-x-lab/
+├── .github/workflows/
+│   └── deploy.yml                  # Automated GitHub Pages CI/CD pipeline
+├── public/
+│   └── assets/                     # Custom Day/Night SVG vehicle profiles
+├── screenshots/                    # Demo video (.mp4) & UI captures (.png)
+├── src/
+│   ├── components/
+│   │   ├── StudioHeader.jsx        # Navigation, Vision toggle & live telemetry link status
+│   │   ├── StudioWindTunnelCanvas.jsx # SVG vehicle & dynamic airflow vector engine
+│   │   ├── StudioAeroHudDock.jsx   # Floating glassmorphic aero parameter controls
+│   │   ├── StudioGForceMeter.jsx   # Kamm's Friction Circle G-force plotter
+│   │   ├── StudioChassisTelemetry.jsx # 4-corner brake/tire thermals & PTV+ split
+│   │   ├── StudioDynoChart.jsx     # Interactive torque & power curve comparator
+│   │   └── StudioDragRaceRunner.jsx # 1/4-mile acceleration physics simulator
+│   ├── context/
+│   │   └── ThemeContext.jsx        # Day & Night vision state management
+│   └── App.jsx                     # Main telemetry workspace & module routing
+├── index.html
+├── package.json
+└── vite.config.js                  # Configured with base: '/porsche-apex-x-lab/'
